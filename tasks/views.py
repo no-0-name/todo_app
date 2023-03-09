@@ -5,7 +5,7 @@ from .forms import *
 
 
 def TaskList(request):
-    tasks = Task.objects.all().order_by('created')
+    tasks = Task.objects.all().order_by("created")
 
     form = TaskForm()
 
