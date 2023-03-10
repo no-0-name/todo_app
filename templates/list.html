@@ -8,26 +8,25 @@
     <title>To do app</title>
 </head>
 <style>
+    
+    body{
+        background-color: #E6E6FA;
+    }
 
-	body{
-		background-color: #E6E6FA;
-	}
+    input{
+       width: 100%;
+       padding: 10px 10px;
+       margin: 4px 0;
+    }
 
-	input{
-		width: 100%;
-		padding: 10px 10px;
-		margin: 4px 0;
-
-	}
-
-	.center-column{
-		width:600px;
-		margin: 20px auto;
-		padding:20px;
-		background-color: #fff;
-		border-radius: 3px;
-		box-shadow: 6px 2px 30px;
-	}
+    .center-column{
+	width:600px;
+	margin: 20px auto;
+	padding:20px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 6px 2px 30px;
+    }
 
     .btn-danger{
         width:auto;
@@ -43,10 +42,10 @@
 <body>
     <div class="center-column">
     <form method="POST" action="/">
-		{% csrf_token %}
-		{{form.title}}
-		<input class="btn btn-success" type="submit" name="Create Task">
-	</form>
+	{% csrf_token %}
+	{{form.title}}
+	<input class="btn btn-success" type="submit" name="Create Task">
+    </form>
 
     <ol class="list-group list-group-numbered">
         {% for item in tasks %}
