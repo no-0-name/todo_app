@@ -9,39 +9,37 @@
 </head>
 <style>
     body{
-		background-color: #E6E6FA;
-	}
+	background-color: #E6E6FA;
+    }
 
     .center-column{
-		width:600px;
-		margin: 20px auto;
-		padding:20px;
-		background-color: #fff;
-		border-radius: 3px;
-		box-shadow: 6px 2px 30px;
-	}
+	width:600px;
+	margin: 20px auto;
+	padding:20px;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 6px 2px 30px;
+    }
 
 
-	.btn-secondary{
-		width: 100%;
-		margin: 4px 0;
-	}
+    .btn-secondary{
+	width: 100%;
+	margin: 4px 0;
+    }
 
-	.btn-danger{
-		width: 100%;
-	}
-
+    .btn-danger{
+	width: 100%;
+    }
 </style>
 <body>
-	<div class="center-column">
-		<p>Are you sure you want to delete "{{task}}"?</p>
-
-		<form method="POST" action="">
-			{% csrf_token %}
-			<input class="btn btn-danger" type="submit" name="Confirm">
-		</form>
-
-		<a class="btn btn-secondary" href="{% url 'list' %}" >Cancel</a>
-	</div>
+    <div class="center-column">
+    	<p>Are you sure you want to delete "{{task}}"?</p>
+        <form method="POST" action="">
+  	    {% csrf_token %}
+	    <input class="btn btn-danger" type="submit" name="Confirm">
+	</form>
+		
+        <a class="btn btn-secondary" href="{% url 'list' %}" >Cancel</a>
+    </div>
 </body>
 </html>
