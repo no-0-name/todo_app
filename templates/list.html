@@ -31,7 +31,7 @@
         width:auto;
         float:right;
         margin-left: 5px
-	}
+    }
 
     .btn-warning{
         width:auto;
@@ -40,27 +40,25 @@
 </style>
 <body>
     <div class="center-column">
-    <form method="POST" action="/">
-	{% csrf_token %}
-	{{form.title}}
-	<input class="btn btn-success" type="submit" name="Create Task">
-    </form>
+        <form method="POST" action="/">
+	    {% csrf_token %}
+	    {{form.title}}
+	    <input class="btn btn-success" type="submit" name="Create Task">
+        </form>
 
-    <ol class="list-group list-group-numbered">
-        {% for item in tasks %}
-        
-            <li class="list-group-item">
-                {% if item.complete == True %}
-                    <strike>{{item}}</strike>
-                {% else %}
-                    <span>{{item}}</span>
-                {% endif %}
-                
-                <a class="btn btn-sm btn-danger" href="{% url "delete" item.pk %}">Delete</a>
-                <a class="btn btn-sm btn-warning" href="{% url "update" item.pk %}">Update</a>
-            </li>
-        {% endfor %}
-    </ol>
+        <ol class="list-group list-group-numbered">
+            {% for item in tasks %}
+                <li class="list-group-item">
+		    {% if item.complete == True %}
+                        <strike>{{item}}</strike>
+                    {% else %}
+                        <span>{{item}}</span>
+                    {% endif %}
+                    <a class="btn btn-sm btn-danger" href="{% url "delete" item.pk %}">Delete</a>
+                    <a class="btn btn-sm btn-warning" href="{% url "update" item.pk %}">Update</a>
+                </li>
+            {% endfor %}
+        </ol>
     </div>
 </div>
 </body>
