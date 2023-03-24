@@ -1,6 +1,6 @@
 # TODO_APP
 
-This is a Django ToDo project that uses the PostgreSQL database to store and process data.
+This is a Django TODO project that uses the PostgreSQL database to store and process data.
 
 ## Requirements
 
