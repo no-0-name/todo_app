@@ -11,8 +11,8 @@ This is a Django TODO project that uses the PostgreSQL database to store and pro
 
 ## Installation
 
-1. Clone the repository using the command `git clone https://github.com/username/projectname.git`
-2. Go to the project folder using the command `cd projectname`
+1. Clone the repository using the command `[git clone https://github.com/username/projectname.git](https://github.com/no-0-name/todo_app.git)`
+2. Go to the project folder using the command `cd todo_app`
 3. Create and activate a virtual environment using the commands `python -m venv venv` and `source venv/bin/activate`
 4. Install the required dependencies using the command `pip install -r requirements.txt`
 5. Set up the PostgreSQL database using the commands `psql -U postgres -c "CREATE DATABASE dbname"` and `psql -U postgres -c "CREATE USER username WITH PASSWORD 'password'"`
